@@ -32,9 +32,8 @@ PRODUCT_PACKAGES += \
 
 # Omx
 PRODUCT_PACKAGES += \
-    mm-vdec-omx-test \
-    mm-venc-omx-test720p \
     libmm-omxcore \
+    libdivxdrmdecrypt \
     libOmxCore \
     libstagefrighthw \
     libOmxVdec \
