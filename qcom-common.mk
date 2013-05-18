@@ -14,12 +14,10 @@
 
 COMMON_PATH := device/sony/qcom-common
 
-# EGL config
-PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/config/egl.cfg:system/lib/egl/egl.cfg
+DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay
 
 PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/config/media_codecs.xml:system/etc/media_codecs.xml
+    $(COMMON_PATH)/rootdir/system/etc/media_codecs.xml:system/etc/media_codecs.xml
 
 # QCOM Display
 PRODUCT_PACKAGES += \
@@ -32,18 +30,18 @@ PRODUCT_PACKAGES += \
 
 # Omx
 PRODUCT_PACKAGES += \
-    libmm-omxcore \
-    libdivxdrmdecrypt \
-    libOmxCore \
-    libstagefrighthw \
-    libOmxVdec \
-    libOmxVenc \
     libOmxAacEnc \
     libOmxAmrEnc \
+    libOmxCore \
     libOmxEvrcEnc \
     libOmxQcelp13Enc \
+    libOmxVdec \
+    libOmxVenc \
     libc2dcolorconvert \
-    libdashplayer
+    libdashplayer \
+    libdivxdrmdecrypt \
+    libmm-omxcore \
+    libstagefrighthw
 
 # Power
 PRODUCT_PACKAGES += \

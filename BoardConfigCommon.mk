@@ -36,10 +36,22 @@ TARGET_QCOM_DISPLAY_VARIANT := caf
 USE_OPENGL_RENDERER := true
 TARGET_USES_ION := true
 TARGET_USES_C2D_COMPOSITION := true
-BOARD_EGL_CFG := device/sony/qcom-common/config/egl.cfg
+
+#Camera
+COMMON_GLOBAL_CFLAGS += -DQCOM_BSP_CAMERA_ABI_HACK -DMR0_CAMERA_BLOB
+
+ifeq ($(BOARD_EGL_CFG),)
+BOARD_EGL_CFG := device/sony/qcom-common/rootdir/system/lib/egl/egl.cfg
+endif
+
+# RIL
+BOARD_PROVIDES_LIBRIL := true
 
 # Audio
 TARGET_QCOM_AUDIO_VARIANT := caf
+
+# Bluetoth
+BOARD_HAVE_BLUETOOTH := true
 
 # Webkit
 ENABLE_WEBGL := true
