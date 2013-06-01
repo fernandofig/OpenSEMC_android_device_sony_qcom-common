@@ -49,12 +49,14 @@ PRODUCT_PACKAGES += \
 
 # QCOM
 PRODUCT_PROPERTY_OVERRIDES += \
-    com.qc.hardware=true \
-    dev.pm.dyn_samplingrate=1
+    com.qc.hardware=true
 
 # QC Perf
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.extension_library=/system/lib/libqc-opt.so
+
+# Qualcomm random numbers generated
+PRODUCT_PACKAGES += qrngd
 
 # OpenGL ES
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -65,12 +67,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.hw=1 \
     debug.egl.hw=1 \
     debug.composition.type=dyn \
+    persist.hwc.mdpcomp.enable=true \
     debug.mdpcomp.logs=0 \
-    debug.egl.recordable.rgba8888=1
-
-# hwcomposer - causes screen blink
-#PRODUCT_PROPERTY_OVERRIDES += \
-#persist.hwc.mdpcomp.enable=true
+    ro.hwui.text_cache_width=2048
 
 # Wifi
 PRODUCT_PROPERTY_OVERRIDES += \
