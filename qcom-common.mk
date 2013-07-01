@@ -29,8 +29,8 @@ PRODUCT_PACKAGES += \
     libI420colorconvert
 
 # Camera wrapper
-PRODUCT_PACKAGES += \
-    camera.qcom
+#PRODUCT_PACKAGES += \
+#    camera.qcom
 
 # Omx
 PRODUCT_PACKAGES += \
@@ -71,7 +71,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.hw=1 \
     debug.egl.hw=1 \
     debug.composition.type=dyn \
-    persist.hwc.mdpcomp.enable=true \
+    debug.mdpcomp.maxlayer=3 \
     debug.mdpcomp.logs=0 \
     ro.hwui.text_cache_width=2048
 
