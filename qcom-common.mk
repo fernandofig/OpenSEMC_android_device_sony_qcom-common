@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-COMMON_PATH := device/sony/qcom-common
+COMMON_PATH := $(LOCAL_PATH)
 
 DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay
 
