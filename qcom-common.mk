@@ -32,6 +32,10 @@ PRODUCT_PACKAGES += \
 #PRODUCT_PACKAGES += \
 #    camera.qcom
 
+# Legacy Camera
+#PRODUCT_PACKAGES += \
+#    LegacyCamera
+
 # Omx
 PRODUCT_PACKAGES += \
     libOmxAacEnc \
